@@ -32,3 +32,7 @@ float Paddle::top() {
 float Paddle::bottom() {
 	return this->shape.getPosition().y + (this->paddleHeight / 2);
 }
+
+sf::Vector2f Paddle::getPosition() {
+	return shape.getPosition();
+}

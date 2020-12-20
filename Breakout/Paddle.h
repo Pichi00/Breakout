@@ -11,6 +11,7 @@ public:
 	float right();
 	float top();
 	float bottom();
+	sf::Vector2f getPosition();
 private:
 	sf::RectangleShape shape;
 	const float paddleWidth = 150.0f;

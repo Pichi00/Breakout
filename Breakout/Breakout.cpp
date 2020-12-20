@@ -6,6 +6,23 @@
 
 const int windowWidth = 1024;
 const int windowHeight = 576;
+
+template <class T1, class T2> bool isIntersecting(T1& a, T2& b) {
+    return  a.right() >= b.left() && a.left() <= b.right() &&
+            a.bottom() >= b.top() && a.top() <= b.bottom();
+}
+
+bool colision_test(Paddle& p, Ball& b) {
+    if (!isIntersecting(p, b)) return false;
+    
+    b.moveUp();
+
+    if      (b.getPosition().x < p.getPosition().x)    b.moveLeft();
+    else if (b.getPosition().x > p.getPosition().x)    b.moveRight();
+        
+    
+}
+
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Breakout game");
@@ -23,6 +40,7 @@ int main()
         }
         ball.update(windowWidth, windowHeight);
         paddle.update(windowWidth);
+        colision_test(paddle,ball);
         window.draw(ball);
         window.draw(paddle);
         window.display();

@@ -11,6 +11,14 @@ public:
 	float right();
 	float top();
 	float bottom();
+
+	void moveUp();
+	void moveDown();
+	void moveLeft();
+	void moveRight();
+
+	sf::Vector2f getPosition();
+
 private:
 	sf::CircleShape shape;
 	const float ballRadius = 16.0f;

@@ -34,3 +34,20 @@ float Ball::top() {
 float Ball::bottom() {
 	return this->shape.getPosition().y + this->ballRadius;
 }
+
+void Ball::moveUp() {
+	this->velocity.y = -ballSpeed;
+}
+void Ball::moveDown() {
+	this->velocity.y = ballSpeed;
+}
+void Ball::moveLeft() {
+	this->velocity.x = -ballSpeed;
+}
+void Ball::moveRight() {
+	this->velocity.x = ballSpeed;
+}
+
+sf::Vector2f Ball::getPosition() {
+	return shape.getPosition();
+}
