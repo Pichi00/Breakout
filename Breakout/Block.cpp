@@ -1,7 +1,7 @@
 #include "Block.h"
 #include<SFML/Graphics.hpp>
 
-Block::Block(float t_X, float t_Y, float t_Width, float t_Height) {
+Block::Block(int t_X, int t_Y, int t_Width, int t_Height) {
 	shape.setSize(sf::Vector2f(t_Width, t_Height));
 	shape.setOrigin(t_Width / 2, t_Height / 2);
 	shape.setPosition(t_X, t_Y);	

@@ -6,8 +6,8 @@
 class Block: public sf::Drawable
 {
 public:
-	Block() = delete;
-	Block(float t_X, float t_Y, float t_Width, float t_Height);
+	Block() = default;
+	Block(int t_X, int t_Y, int t_Width, int t_Height);
 	~Block() = default;
 
 	void update();
